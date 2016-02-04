@@ -37,9 +37,13 @@ php ./codeception/bin/yii migrate --migrationPath=@vendor/devgroup/yii2-deferred
 
 ### Run test
 
-   ```
-   # run functional tests
-   codecept run functional
+Run functional tests
+```
+codecept run functional
+```
    
-   # run functional tests with coverage (see [Codeception Codecoverage](http://codeception.com/docs/11-Codecoverage#.VrMMsEIvBhE))
-   codecept run functional --coverage-html
+Run functional tests with coverage (see [Codeception Codecoverage](http://codeception.com/docs/11-Codecoverage#.VrMMsEIvBhE))
+
+```
+codecept run functional --coverage-html
+```
