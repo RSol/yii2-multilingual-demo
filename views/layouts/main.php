@@ -113,6 +113,11 @@ AppAsset::register($this);
                 </p>
             </div>
             <div class="sidebar-module">
+                <?=
+                DevGroup\Multilingual\widgets\CityConfirmation::widget()
+                ?>
+            </div>
+            <div class="sidebar-module">
                 <h4 class="widget-title">
                     <?= Yii::t('app', 'Newsletter') ?>
                 </h4>

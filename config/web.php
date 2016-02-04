@@ -12,7 +12,7 @@ $config = [
             'cookieValidationKey' => '19wRK6yuUnGqL-dtBRZpye2Txxchj61J',
         ],
         'cache' => [
-            'class' => 'yii\caching\FileCache',
+            'class' => yii\caching\DummyCache::className(),
 //            'useMemcached' => true,
             'as lazy' => [
                 'class' => 'DevGroup\TagDependencyHelper\LazyCache',
@@ -54,16 +54,22 @@ $config = [
         ],
         'multilingual' => [
             'class' => \DevGroup\Multilingual\Multilingual::className(),
+            'mockIp' => '213.180.204.3',
             'default_language_id' => 1,
             'handlers' => [
+//                [
+//                    'class' => \DevGroup\Multilingual\DefaultGeoProvider::className(),
+//                    'default' => [
+//                        'country' => [
+//                            'name' => 'England',
+//                            'iso' => 'en',
+//                        ],
+//                    ],
+//                ],
                 [
-                    'class' => \DevGroup\Multilingual\DefaultGeoProvider::className(),
-                    'default' => [
-                        'country' => [
-                            'name' => 'England',
-                            'iso' => 'en',
-                        ],
-                    ],
+                    'class' => \DevGroup\Multilingual\SypexGeoDaemon\Provider::className(),
+                    'host' => '127.0.0.1',
+                    'port' => 16001,
                 ],
             ],
         ],
