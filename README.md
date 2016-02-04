@@ -37,6 +37,7 @@ php ./codeception/bin/yii migrate --migrationPath=@vendor/devgroup/yii2-deferred
 
 ### Run test
 
+   ```
    # run functional tests
    codecept run functional
    
