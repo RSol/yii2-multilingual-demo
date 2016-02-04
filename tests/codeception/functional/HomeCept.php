@@ -3,9 +3,10 @@
 /* @var $scenario Codeception\Scenario */
 
 $I = new FunctionalTester($scenario);
-$I->wantTo('ensure that home page works');
-$I->amOnPage(Yii::$app->homeUrl);
-$I->see('My Company');
-$I->seeLink('About');
-$I->click('About');
-$I->see('This is the About page.');
+$I->amOnPage('/');
+$I->see('Language');
+$I->see('English');
+$I->see('Demo');
+$I->click('.b-language-selector');
+$I->click('Russian');
+$I->see('Демонстрационный');

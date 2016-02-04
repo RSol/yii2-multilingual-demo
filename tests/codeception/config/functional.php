@@ -20,6 +20,12 @@ return yii\helpers\ArrayHelper::merge(
                 ],
                 */
             ],
+            'urlManager' => [
+                'enablePrettyUrl' => false,
+            ],
+            'cache' => [
+                'class' => yii\caching\DummyCache::className(),
+            ],
         ],
     ]
 );
