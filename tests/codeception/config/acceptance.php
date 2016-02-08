@@ -19,6 +19,7 @@ return yii\helpers\ArrayHelper::merge(
             ],
             'urlManager' => [
                 'enablePrettyUrl' => false,
+                'showScriptName' => true,
             ],
             'cache' => [
                 'class' => yii\caching\DummyCache::className(),

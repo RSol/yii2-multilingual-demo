@@ -22,8 +22,19 @@ Now you can go to http://demo.yii2-multilingual.dev/ and test multilingual stuff
 
 For admin user password is 'admin'.
 
+## City location widget
 
-## Test
+For correct working city widget must be usage [sypex-geo-daemon](https://github.com/DevGroup-ru/sypex-geo-daemon) or 
+configure settings in config/web.php
+
+```php
+                    'class' => \DevGroup\Multilingual\SypexGeoDaemon\Provider::className(),
+                    'host' => '127.0.0.1',
+                    'port' => 16001,
+```
+
+
+## Functional test
 
 ### Prepare
 
@@ -46,4 +57,22 @@ Run functional tests with coverage (see [Codeception Codecoverage](http://codece
 
 ```
 codecept run functional --coverage-html
+```
+
+## Acceptance test
+
+### Prepare
+
+Install [PhantomJs](http://phantomjs.org/) and run
+
+```bash
+phantomjs --webdriver=4445
+```
+
+be sure that you run 'sypex-geo-daemon' or configure it
+ 
+### Run test
+
+```
+codecept run acceptance
 ```
