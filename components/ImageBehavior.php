@@ -80,7 +80,7 @@ class ImageBehavior extends Behavior
         foreach ($this->attributes as $attr => $options) {
             $this->ensureAttribute($attr, $options);
             $file = UploadedFile::getInstance($model, $attr);
-            if ($file && !$file->hasError) {
+            if ($file !== null && $file->hasError === false) {
                 $this->createDirIfNotExists($attr);
                 if (!$model->isNewRecord) {
                     $this->deleteFiles($attr);

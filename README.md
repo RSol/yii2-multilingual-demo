@@ -24,8 +24,9 @@ For admin user password is 'admin'.
 
 ## City location widget
 
-For correct working city widget must be usage [sypex-geo-daemon](https://github.com/DevGroup-ru/sypex-geo-daemon) or 
-configure settings in config/web.php
+City location widgets need correct working geo provider configured. For using [sypex-geo-daemon](https://github.com/DevGroup-ru/sypex-geo-daemon) configure your settings in config/web.php:
+
+—
 
 ```php
                     'class' => \DevGroup\Multilingual\SypexGeoDaemon\Provider::className(),
@@ -69,7 +70,7 @@ Install [PhantomJs](http://phantomjs.org/) and run
 phantomjs --webdriver=4445
 ```
 
-be sure that you run 'sypex-geo-daemon' or configure it
+Be sure that 'supex-geo-daemon' is running and configured.
  
 ### Run test
 
